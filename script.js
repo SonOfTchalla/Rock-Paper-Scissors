@@ -47,7 +47,7 @@ function playRound(humanChoice, computerChoice){
     }else if(computerChoice === humanChoice){
         return `${computerChoice} ties ${humanChoice}`;
     }else if(humanChoice === 'invalid input'){
-        return 'invalid input';
+        return 'invalid input! Please choose a valid option';
     } 
     else{
         humanScore++;
@@ -59,6 +59,8 @@ function playRound(humanChoice, computerChoice){
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice()
 
+console.log(`You chose: ${humanSelection}`);
+console.log(`Computer chose: ${computerSelection}`);
 console.log(playRound(humanSelection, computerSelection));
 
 //continue from step 6
