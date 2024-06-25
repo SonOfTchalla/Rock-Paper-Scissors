@@ -21,13 +21,9 @@ function getComputerChoice () {
 
 //get the human choice
 function getHumanChoice() {
-    let userChoice = prompt("Choose one of the following options: 0-Rock, 1-Paper, 2-Scissors. What is your choice?");
-    if(userChoice === '0'){
-        return 'rock';
-    }else if(userChoice === '1'){
-        return 'paper';
-    }else if(userChoice === '2'){
-        return 'scissors';
+    let userChoice = prompt("Choose one of the following options: Rock, Paper or Scissors. What is your choice?");
+    if(userChoice.toLowerCase() === "rock" || userChoice.toLowerCase() === "paper" || userChoice.toLowerCase() === "scissors"){
+        return userChoice;
     }else{
         return 'invalid input';
     }
@@ -35,6 +31,9 @@ function getHumanChoice() {
 
 //play a single round
 function playRound(humanChoice, computerChoice){
+    /*humanChoice = humanChoice.toLowerCase();
+    computerChoice = computerChoice.toLowerCase();*/
+
     if(computerChoice === "rock" && humanChoice === "scissors"){
         computerScore++;
         return `You lost! ${computerChoice} beats ${humanChoice}`;
@@ -59,7 +58,7 @@ function playRound(humanChoice, computerChoice){
 const humanSelection = getHumanChoice();
 const computerSelection = getComputerChoice()
 
-console.log(`You chose: ${humanSelection}`);
+console.log(`You chose: ${humanSelection.toLowerCase()}`);
 console.log(`Computer chose: ${computerSelection}`);
 console.log(playRound(humanSelection, computerSelection));
 
