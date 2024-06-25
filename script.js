@@ -3,7 +3,7 @@
 //keep a score
 let humanScore = 0;
 let computerScore = 0;
-/*
+
 //keep a round count
 
 //get the computer choice
@@ -18,8 +18,9 @@ function getComputerChoice () {
         return "scissors";
     }    
 }
-//console.log(`Computer chose: ${getComputerChoice()}`);
 
+//console.log(`Computer chose: ${getComputerChoice()}`);
+/*
 //get the human choice
 function getHumanChoice() {
     let userChoice = prompt("Choose one of the following options: 0-Rock, 1-Paper, 2-Scissors. What is your choice?");
