@@ -31,8 +31,7 @@ function getHumanChoice() {
 
 //play a single round
 function playRound(humanChoice, computerChoice){
-    /*humanChoice = humanChoice.toLowerCase();
-    computerChoice = computerChoice.toLowerCase();*/
+    humanChoice = humanChoice.toLowerCase();
 
     if(computerChoice === "rock" && humanChoice === "scissors"){
         computerScore++;
