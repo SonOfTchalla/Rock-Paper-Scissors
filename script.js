@@ -9,7 +9,7 @@ let computerScore = 0;
 //get the computer choice
 function getComputerChoice () {
     let compChoice = Math.random()
-    if(compChoice >= 0 && compChoice < 0.33){
+    if(compChoice >= 0 && compChoice <= 0.33){
         return "rock";
     } else if(compChoice > 0.33 && compChoice <= 0.66) {
         return "paper";
@@ -19,8 +19,6 @@ function getComputerChoice () {
     }    
 }
 
-//console.log(`Computer chose: ${getComputerChoice()}`);
-/*
 //get the human choice
 function getHumanChoice() {
     let userChoice = prompt("Choose one of the following options: 0-Rock, 1-Paper, 2-Scissors. What is your choice?");
@@ -34,8 +32,8 @@ function getHumanChoice() {
         return 'invalid input';
     }
 }
-//console.log(`User chose: ${getHumanChoice()}`);
 
+/*
 //play a single round
 function playRound(humanChoice, computerChoice){
     if(computerChoice === "rock" && humanChoice === "scissors"){
