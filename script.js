@@ -49,7 +49,7 @@ function playRound(humanChoice, computerChoice){
     } 
     else{
         humanScore++;
-        return `You won! ${humanChoice} beats ${computerChoice}`;
+        return `You win! ${humanChoice} beats ${computerChoice}`;
     }
 
 }
@@ -61,6 +61,8 @@ console.log(`You chose: ${humanSelection.toLowerCase()}`);
 console.log(`Computer chose: ${computerSelection}`);
 console.log(playRound(humanSelection, computerSelection));
 
-//continue from step 6
+function playGame(){
+    
+}
 
-//delcare the winner */
+//delcare the winner
