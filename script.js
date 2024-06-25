@@ -1,6 +1,7 @@
 //rock paper scissors game
 
 //keep a round count
+let roundCount = 0;
 
 //get the computer choice
 function getComputerChoice () {
