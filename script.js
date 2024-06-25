@@ -3,7 +3,7 @@
 //keep a score
 let humanScore = 0;
 let computerScore = 0;
-
+/*
 //keep a round count
 
 //get the computer choice
@@ -65,4 +65,4 @@ console.log(playRound(humanSelection, computerSelection));
 
 //continue from step 6
 
-//delcare the winner
+//delcare the winner */
