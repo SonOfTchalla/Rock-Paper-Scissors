@@ -33,7 +33,6 @@ function getHumanChoice() {
     }
 }
 
-/*
 //play a single round
 function playRound(humanChoice, computerChoice){
     if(computerChoice === "rock" && humanChoice === "scissors"){
