@@ -43,27 +43,29 @@ function getComputerChoice () {
 
 //play a single round
 function playRound(humanChoice, computerChoice){
-    //humanChoice = humanChoice.toLowerCase();
+    let playerEl = document.querySelector(".player")
+    let computerEl = document.querySelector(".computer")
+    let resultEl = document.querySelector(".result")
 
-    console.log(`You chose ${humanChoice}`)
-    console.log(`Computer chose ${computerChoice}`)
+    playerEl.textContent = `You Chose: ${humanChoice}`;
+    computerEl.textContent = `Computer Chose: ${computerChoice}`;
     if(computerChoice === "rock" && humanChoice === "scissors"){
         computerScore++;
-        console.log(`You lost! ${computerChoice} beats ${humanChoice}`);
+        resultEl.textContent = `You lost! ${computerChoice} beats ${humanChoice}`;
     }else if(computerChoice === "paper" && humanChoice === "rock"){
         computerScore++;
-        console.log(`You lost! ${computerChoice} beats ${humanChoice}`);
+        resultEl.textContent = `You lost! ${computerChoice} beats ${humanChoice}`;
     }else if(computerChoice === "scissors" && humanChoice === "paper"){
         computerScore++;
-        console.log(`You lost! ${computerChoice} beats ${humanChoice}`);
+        resultEl.textContent = `You lost! ${computerChoice} beats ${humanChoice}`;
     }else if(computerChoice === humanChoice){
-        console.log(`${computerChoice} ties ${humanChoice}`);
+        resultEl.textContent = `${computerChoice} ties ${humanChoice}`;
     }else if(humanChoice === 'invalid input'){
-        console.log('invalid input! Please choose a valid option');
+        resultEl.textContent = 'invalid input! Please choose a valid option';
     } 
     else{
         humanScore++;
-        console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+        resultEl.textContent = `You win! ${humanChoice} beats ${computerChoice}`;
     }
 
     console.log(`Human Score: ${humanScore}`)
