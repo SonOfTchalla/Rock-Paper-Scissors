@@ -46,6 +46,8 @@ function playRound(humanChoice, computerChoice){
     let playerEl = document.querySelector(".player")
     let computerEl = document.querySelector(".computer")
     let resultEl = document.querySelector(".result")
+    let hScore = document.querySelector("#h-score")
+    let cScore = document.querySelector("#c-score")
 
     playerEl.textContent = `You Chose: ${humanChoice}`;
     computerEl.textContent = `Computer Chose: ${computerChoice}`;
@@ -68,8 +70,8 @@ function playRound(humanChoice, computerChoice){
         resultEl.textContent = `You win! ${humanChoice} beats ${computerChoice}`;
     }
 
-    console.log(`Human Score: ${humanScore}`)
-    console.log(`Computer Score: ${computerScore}`)
+    hScore.textContent = `Player Score: ${humanScore}`;
+    cScore.textContent = `Computer Score: ${computerScore}`;
 }
 
     
