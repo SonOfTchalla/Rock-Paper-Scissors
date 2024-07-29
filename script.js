@@ -1,6 +1,12 @@
 //rock paper scissors game
 
 
+//Query selectors
+let rockEl = document.querySelector("#rock")
+let paperEl = document.querySelector("#paper")
+let scissorsEl = document.querySelector("#scissors")
+
+
 //get the computer choice
 function getComputerChoice () {
     let compChoice = Math.random()
@@ -58,7 +64,7 @@ function playGame(){
             const humanSelection = getHumanChoice();
             const computerSelection = getComputerChoice()
 
-            console.log(`-------Round ${i+1}-------`);
+            //console.log(`-------Round ${i+1}-------`);
             console.log(`You chose: ${humanSelection.toLowerCase()}`);
             console.log(`Computer chose: ${computerSelection}`); 
 
