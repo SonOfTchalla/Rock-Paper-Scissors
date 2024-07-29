@@ -48,30 +48,45 @@ function playRound(humanChoice, computerChoice){
     let resultEl = document.querySelector(".result")
     let hScore = document.querySelector("#h-score")
     let cScore = document.querySelector("#c-score")
+    let winnerEl = document.querySelector(".winner")
 
-    playerEl.textContent = `You Chose: ${humanChoice}`;
-    computerEl.textContent = `Computer Chose: ${computerChoice}`;
-    if(computerChoice === "rock" && humanChoice === "scissors"){
-        computerScore++;
-        resultEl.textContent = `You lost! ${computerChoice} beats ${humanChoice}`;
-    }else if(computerChoice === "paper" && humanChoice === "rock"){
-        computerScore++;
-        resultEl.textContent = `You lost! ${computerChoice} beats ${humanChoice}`;
-    }else if(computerChoice === "scissors" && humanChoice === "paper"){
-        computerScore++;
-        resultEl.textContent = `You lost! ${computerChoice} beats ${humanChoice}`;
-    }else if(computerChoice === humanChoice){
-        resultEl.textContent = `${computerChoice} ties ${humanChoice}`;
-    }else if(humanChoice === 'invalid input'){
-        resultEl.textContent = 'invalid input! Please choose a valid option';
-    } 
-    else{
-        humanScore++;
-        resultEl.textContent = `You win! ${humanChoice} beats ${computerChoice}`;
+    if(humanScore === 5 || computerScore === 5)
+    {
+        if(humanScore === 5){
+            winnerEl.textContent = 'Bravo! You have won the game!';
+            return 0;
+        }else{
+            winnerEl.textContent = 'You have lost the game!';
+            return 0;
+        } 
     }
+    else
+    {
+        playerEl.textContent = `You Chose: ${humanChoice}`;
+        computerEl.textContent = `Computer Chose: ${computerChoice}`;
+        if(computerChoice === "rock" && humanChoice === "scissors"){
+            computerScore++;
+            resultEl.textContent = `You lost! ${computerChoice} beats ${humanChoice}`;
+        }else if(computerChoice === "paper" && humanChoice === "rock"){
+            computerScore++;
+            resultEl.textContent = `You lost! ${computerChoice} beats ${humanChoice}`;
+        }else if(computerChoice === "scissors" && humanChoice === "paper"){
+            computerScore++;
+            resultEl.textContent = `You lost! ${computerChoice} beats ${humanChoice}`;
+        }else if(computerChoice === humanChoice){
+            resultEl.textContent = `${computerChoice} ties ${humanChoice}`;
+        }else if(humanChoice === 'invalid input'){
+            resultEl.textContent = 'invalid input! Please choose a valid option';
+        } 
+        else{
+            humanScore++;
+            resultEl.textContent = `You win! ${humanChoice} beats ${computerChoice}`;
+        }
 
-    hScore.textContent = `Player Score: ${humanScore}`;
-    cScore.textContent = `Computer Score: ${computerScore}`;
+        hScore.textContent = `Player Score: ${humanScore}`;
+        cScore.textContent = `Computer Score: ${computerScore}`;
+    }
+    
 }
 
     
