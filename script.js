@@ -1,7 +1,5 @@
 //rock paper scissors game
 
-//keep a round count
-let roundCount = 5;
 
 //get the computer choice
 function getComputerChoice () {
@@ -57,9 +55,6 @@ function playGame(){
     }
     
     
-    //loop for 5 rounds
-    for(let i = 0; i < roundCount; i++)
-        {
             const humanSelection = getHumanChoice();
             const computerSelection = getComputerChoice()
 
@@ -73,7 +68,6 @@ function playGame(){
             console.log(`User Score: ${humanScore}`);
             console.log(`Computer Score: ${computerScore}`);
             console.log(' ');
-        }
 
         
 
