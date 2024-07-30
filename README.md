@@ -4,7 +4,7 @@ This is a rock-paper-scissors game, built using Vanilla Javascript
 
 ## Usage
 
-Open the developers's console (shortcut: Ctrl+Shift+j)There are 5 rounds, each round you will be prompted to make a choice. Simply input rock, paper or scissors. It is case-insensitive. Then press enter or click "OK"
+There are three buttons, labelled "Rock", "Paper" and "Scissors". A click of each of the buttons corresponds to a move, the first player to reach a score of 5 is declared the winner.
 
 ## License
 
