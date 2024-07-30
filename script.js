@@ -50,8 +50,17 @@ function playRound(humanChoice, computerChoice){
     let cScore = document.querySelector("#c-score")
     let winnerEl = document.querySelector(".winner")
 
-    check(humanScore, computerScore, winnerEl)
-    
+    if(humanScore === 5 || computerScore === 5)
+    {
+        if(humanScore === 5){
+            winnerEl.textContent = 'Bravo! You have won the game!';
+            return 0;
+        }else{
+            winnerEl.textContent = 'You have lost the game!';
+            return 0;
+        } 
+    }else
+    {
         playerEl.textContent = `You Chose: ${humanChoice}`;
         computerEl.textContent = `Computer Chose: ${computerChoice}`;
         if(computerChoice === "rock" && humanChoice === "scissors"){
@@ -75,23 +84,8 @@ function playRound(humanChoice, computerChoice){
 
         hScore.textContent = `Player Score: ${humanScore}`;
         cScore.textContent = `Computer Score: ${computerScore}`;
-
-    check(humanScore, computerScore, winnerEl)
+    }
 }
-
-function check(hs, cs, wl){
-    if(hs === 5 || cs === 5)
-        {
-            if(hs === 5){
-                wl.textContent = 'Bravo! You have won the game!';
-                return 0;
-            }else{
-                wl.textContent = 'You have lost the game!';
-                return 0;
-            } 
-        }
-}
-
     
 
     
