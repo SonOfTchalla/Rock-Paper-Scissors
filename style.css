@@ -28,3 +28,11 @@ body{
     display: flex;
     flex-direction: column;
 }
+
+.container .header button{
+    height: 40px;
+    width: 200px;
+    margin-bottom: 10px;
+    background-color: #E9E6DD;
+    border: none;
+}
