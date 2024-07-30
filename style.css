@@ -15,4 +15,16 @@ body{
     background-color: #0274BD;
     margin: auto;
     margin-top: 100px;
+    padding: 50px;
+}
+
+
+.container .header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.container .header div:nth-child(1){
+    display: flex;
+    flex-direction: column;
 }
